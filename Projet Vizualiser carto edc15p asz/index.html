@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <title>Cartographie ASZ 130</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+  <script src="js/charts.js" defer></script>
+  <script src="js/calculs.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Cartographie ASZ 130</h1>
+  </header>
+
+  <main>
+    <section id="map-section" style="overflow-x: auto;">
+      <table id="mapTable">
+        <thead>
+          <tr>
+            <th class="x-axis-head">Settings / RPM</th>
+            <th>0</th><th>550</th><th>551</th><th>1000</th><th>1250</th>
+            <th>1500</th><th>1750</th><th>2000</th><th>2250</th><th>2500</th>
+            <th>2750</th><th>3000</th><th>3250</th><th>3500</th><th>3750</th>
+            <th>4000</th><th>4250</th><th>4500</th><th>4750</th><th>5000</th>
+            <th>5250</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th class="row-label">AFR</th></tr>
+          <tr><th class="row-label">IQ</th></tr>
+          <tr><th class="row-label">Boost</th></tr>
+          <tr><th class="row-label">SOI</th></tr>
+          <tr><th class="row-label">TIdeg</th></tr>
+          <tr><th class="row-label">ATDC</th></tr>
+          <tr><th class="row-label">TIms</th></tr>
+          <tr><th class="row-label">N75</th></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div id="hoverChartContainer" style="display:none; position:absolute; z-index:999; background:#fff; border:1px solid #ccc; border-radius:4px; box-shadow:0 2px 6px rgba(0,0,0,0.2); padding:8px;">
+      <canvas id="hoverChart" width="400" height="200"></canvas>
+    </div>
+  </main>
+</body>
+</html>
