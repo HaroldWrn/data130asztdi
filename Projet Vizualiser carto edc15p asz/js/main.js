@@ -126,7 +126,7 @@ function updateAFR(col) {
 }
 
 function computeTIms(col) {
-  const ti = parseFloat(getInput("TIdeg", col)?.value);
+  const ti = parseFloat(getInput("TIdeg", col)?.value.replace(",", "."));
   const rpm = rpmList[col - 1];
   if (isNaN(ti)) return null;
   return (ti * 60000) / (rpm * 360);
@@ -141,8 +141,8 @@ function updateTIms(col) {
 }
 
 function computeATDC(col) {
-  const soi = parseFloat(getInput("SOI", col)?.value);
-  const ti = parseFloat(getInput("TIdeg", col)?.value);
+  const soi = parseFloat(getInput("SOI", col)?.value.replace(",", "."));
+  const ti = parseFloat(getInput("TIdeg", col)?.value.replace(",", "."));
   if (isNaN(soi) || isNaN(ti)) return null;
   return soi + ti;
 }
