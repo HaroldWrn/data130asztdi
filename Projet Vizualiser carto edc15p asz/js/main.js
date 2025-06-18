@@ -210,7 +210,7 @@ for (let i = 0; i < rowLabels.length; i++) {
     input.type = "text";
     input.dataset.row = rowLabels[i];
     input.dataset.col = j;
-    if (["AFR", "ATDC", "TIms", "N75"].includes(rowLabels[i])) input.readOnly = true;
+    if (["AFR", "Boost", "ATDC", "TIms", "N75"].includes(rowLabels[i])) input.readOnly = true;
 
     const saved = localStorage.getItem(`${rowLabels[i]}_${j}`);
     if (saved !== null) input.value = saved;
